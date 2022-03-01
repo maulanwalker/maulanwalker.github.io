@@ -218,30 +218,10 @@
     selector: '.portfolio-lightbox'
   });
 
-  /**
-   * Initiate portfolio details lightbox 
+    /**
+   * Get age 
    */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '90vh'
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+  let ageInMilliseconds = new Date() - new Date ("1998-03-01");
+  document.getElementById("age").innerHTML = Math.floor(ageInMilliseconds/31536000000);
 
 })()
