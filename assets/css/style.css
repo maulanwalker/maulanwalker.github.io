@@ -12,17 +12,22 @@ body::before {
   content: "";
   position: fixed;
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(128, 128, 128, 1) 100%
-  );
-  background-size: cover;
+  background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
+  background-size: 200%;
   left: 0;
   right: 0;
   top: 0;
   height: 100vh;
   z-index: -1;
+  animation: animate 20s infinite alternate;
+}
+@keyframes animate {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
 }
 @media (min-width: 1024px) {
   body::before {
