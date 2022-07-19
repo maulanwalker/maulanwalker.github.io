@@ -225,3 +225,11 @@
   document.getElementById("age").innerHTML = Math.floor(ageInMilliseconds/31536000000);
 
 })()
+
+$(document).ready(function(){
+  $(".sertifications li").hover(function(){
+    $(this).children().append("<i class='bi bi-box-arrow-up-right'></i>");
+    }, function(){
+    $(this).find(".bi").remove();
+  });
+});
